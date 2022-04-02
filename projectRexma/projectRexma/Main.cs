@@ -46,12 +46,15 @@ namespace projectRexma
         public void EnleverCarte(TypeCarte type, int nbCarte)
         {
             int i = 0;
-            while (i < nbCarte)
-            {
-
-                //cartes.Remove(positionListe);
-            }
-            
+           
+                foreach (Carte c in this.cartes)
+                {
+                    if ( (c.TypeCarte == type) && (i <= nbCartes) )
+                    {
+                        cartes.Remove(c);
+                        i = i+1;
+                    }
+                }   
 
         }
 

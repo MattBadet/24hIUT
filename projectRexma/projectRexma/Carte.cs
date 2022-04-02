@@ -8,6 +8,11 @@ namespace projectRexma
     {
         // Type de la carte
         private TypeCarte typeCarte;
+        public TypeCarte TypeCarte
+        {
+            get { return typeCarte; }
+        }
+
 
         // Renvoie le nombre de points de la carte
         public double Point
