@@ -58,6 +58,62 @@ namespace projectRexma
 
         }
 
+        // Renvoie le type de carte dont la valeur est la plus grande
+        public TypeCarte calculMain()
+        {
+            int nbAligote = 0;
+            int nbChardonnay = 0;
+            int nbGamay = 0;
+            int nbPinoy = 0;
+
+
+            foreach (Carte c in this.cartes)
+            {
+                if (c.TypeCarte == TypeCarte.CHARDONNAY)
+                {
+                    nbChardonnay += 1;
+                }
+                else if (c.TypeCarte == TypeCarte.ALIGOTE)
+                {
+                    nbAligote += 1;
+                }
+                else if (c.TypeCarte == TypeCarte.GAMAY)
+                {
+                    nbGamay += 1;
+                }
+                else if (c.TypeCarte == TypeCarte.PINOY)
+                {
+                    nbPinoy += 1;
+                }
+
+            }
+
+            double valeurAligote = nbAligote * nbAligote * 0.8;
+            double valeurChardonnay = nbChardonnay * nbChardonnay * 1.0;
+            double valeurGamay = nbGamay * nbGamay * 0.9;
+            double valeurPinoy = nbPinoy * nbPinoy * 1.2;
+
+
+            TypeCarte meilleurType = TypeCarte.NULL;
+            if (valeurPinoy > 30)
+            {
+                meilleurType = TypeCarte.PINOY;
+            }
+            else if (valeurChardonnay > 30)
+            {
+                meilleurType = TypeCarte.CHARDONNAY;
+            }
+            else if (valeurGamay > 30)
+            {
+                meilleurType = TypeCarte.GAMAY;
+            }
+            else if (valeurAligote > 30)
+            {
+                meilleurType = TypeCarte.ALIGOTE;
+            }
+
+            return meilleurType;
+        }
         #endregion
 
 
