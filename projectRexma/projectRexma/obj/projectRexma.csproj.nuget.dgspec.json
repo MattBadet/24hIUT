@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mb757045\\source\\Reposh\\24h\\projectRexma\\projectRexma\\projectRexma.csproj": {}
+    "D:\\Mes Documents\\Scolarité\\BUT Informatique\\Semestre 2\\Projet Rexma\\24hIUT\\projectRexma\\projectRexma\\projectRexma.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mb757045\\source\\Reposh\\24h\\projectRexma\\projectRexma\\projectRexma.csproj": {
+    "D:\\Mes Documents\\Scolarité\\BUT Informatique\\Semestre 2\\Projet Rexma\\24hIUT\\projectRexma\\projectRexma\\projectRexma.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mb757045\\source\\Reposh\\24h\\projectRexma\\projectRexma\\projectRexma.csproj",
+        "projectUniqueName": "D:\\Mes Documents\\Scolarité\\BUT Informatique\\Semestre 2\\Projet Rexma\\24hIUT\\projectRexma\\projectRexma\\projectRexma.csproj",
         "projectName": "projectRexma",
-        "projectPath": "C:\\Users\\mb757045\\source\\Reposh\\24h\\projectRexma\\projectRexma\\projectRexma.csproj",
-        "packagesPath": "C:\\Users\\mb757045\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mb757045\\source\\Reposh\\24h\\projectRexma\\projectRexma\\obj\\",
+        "projectPath": "D:\\Mes Documents\\Scolarité\\BUT Informatique\\Semestre 2\\Projet Rexma\\24hIUT\\projectRexma\\projectRexma\\projectRexma.csproj",
+        "packagesPath": "C:\\Users\\Léo FONTAINE\\.nuget\\packages\\",
+        "outputPath": "D:\\Mes Documents\\Scolarité\\BUT Informatique\\Semestre 2\\Projet Rexma\\24hIUT\\projectRexma\\projectRexma\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mb757045\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Léo FONTAINE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -60,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
