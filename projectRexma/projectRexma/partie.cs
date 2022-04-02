@@ -46,6 +46,34 @@ namespace projectRexma
             this.AddJoueurs(player1);
             this.AddJoueurs(player2);
         }
+        public string main(string mess)
+        {
+            return "";
+        }
+        public string Piocher(string mess)
+        {
+            return "";
+        }
+        public string Sommet(string mess)
+        {
+            return "";
+        }
+        public string ReactionMess(string mess)
+        {
+            string[] message = mess.Split("|");
+            if ((message.Length == 2))
+            {
+                return Piocher(message[1]);
+            }
+            else if (message.Length == 4)
+            {
+                return Sommet(message[1]);
+            }
+            else
+            {
+                return main(message);
+            }
+        }
         public void Start()
         {
             this.Connexion();
