@@ -8,7 +8,7 @@ namespace projectRexma
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("Flo le bg");
-            Console.WriteLine("Léo Aussi")
+            Console.WriteLine("Léo Aussi");
         }
     }
 }
