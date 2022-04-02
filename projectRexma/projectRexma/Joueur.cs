@@ -13,6 +13,7 @@ namespace projectRexma
 
         // Ordre du joueur par rapport aux autres
         private int numeroOrdre;
+        public int NumeroOrdre { get => numeroOrdre; set => numeroOrdre = value; }
 
 
         // Main du joueur
@@ -30,6 +31,7 @@ namespace projectRexma
         }
 
 
+
         // Piocher une carte
         public void Piocher(string numeroCarte)
         {
@@ -41,6 +43,21 @@ namespace projectRexma
             //this.main.AjouterCarte()
         }
 
+        // renvoie le nombre de carte du joueur actuelle
+        public int RetournerNbCarte()
+        {
+            return this.main.nbCartes;
+        }
+
+
+        public void Saboter(int direction)
+        {
+            Console.WriteLine($"SABOTAGE|{direction}");
+        }
+
         #endregion
+
+
+
     }
 }
