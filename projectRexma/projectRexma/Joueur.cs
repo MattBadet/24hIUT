@@ -4,7 +4,7 @@ using System.Text;
 
 namespace projectRexma
 {
-    public class JoueurEnnemi
+    public class Joueur
     {
     }
 }
