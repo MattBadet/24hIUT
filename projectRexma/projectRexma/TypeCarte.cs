@@ -9,6 +9,8 @@ namespace projectRexma
         ALIGOTE,
         CHARDONNAY,
         GAMAY,
-        PINOY
+        PINOY,
+        BOUTEILLE,
+        NULL
     }
 }

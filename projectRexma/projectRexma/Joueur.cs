@@ -103,7 +103,10 @@ namespace projectRexma
                 string pioche = this.fluxEntrant.ReadLine();
                 // création bouteille ? donc défausser
 
-                
+                if (TypeCarte.BOUTEILLE > 0)
+                {
+
+                }              
                     
 
                 
