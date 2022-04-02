@@ -31,18 +31,27 @@ namespace projectRexma
 
 
         // Ajout d'une carte dans la main
-        public void AjouterCarte(TypeCarte type)
-        {
-            Carte carte = new Carte(type);
-            cartes.Add(carte);
+        public void AjouterCarte(TypeCarte type,int nbCarte)
+        {   
+            
+            for (int i = 0; i < nbCarte; i++)
+            {
+                Carte carte = new Carte(type);
+                cartes.Add(carte);
+            }
 
         }
 
         // Suppresion d'une carte de la main
-        public void EnleverCarte(int positionListe)
+        public void EnleverCarte(TypeCarte type, int nbCarte)
         {
+            int i = 0;
+            while (i < nbCarte)
+            {
+
+                //cartes.Remove(positionListe);
+            }
             
-            cartes.RemoveAt(positionListe);
 
         }
 

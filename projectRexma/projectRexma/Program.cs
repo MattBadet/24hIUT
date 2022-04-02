@@ -11,6 +11,7 @@ namespace projectRexma
             Console.WriteLine("Léo Aussi");
             Console.WriteLine("Marc est un dogo");
             Console.WriteLine("Loic bg");
+            Console.WriteLine("Test connexion");
         }
     }
 }
