@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Net.Sockets;
+using System.IO;
 
 namespace projectRexma
 {
@@ -10,7 +12,11 @@ namespace projectRexma
         #region Attributs
         // Camp du joueur
         private string camp;
-
+        private TcpClient client;
+        private StreamReader fluxEntrant;
+        private StreamWriter fluxSortant;
+        private int nbtours;
+        private string ordre;
         // Ordre du joueur par rapport aux autres
         private int numeroOrdre;
         public int NumeroOrdre { get => numeroOrdre; set => numeroOrdre = value; }
@@ -30,6 +36,16 @@ namespace projectRexma
             this.main = new Main();
         }
 
+        private void Connexion()
+        {
+            this.client = new TcpClient("127.0.0.1", 1234);
+        }
+        private void CreationFlux()
+        {
+            this.fluxEntrant = new StreamReader(client.GetStream());
+            this.fluxSortant = new StreamWriter(client.GetStream());
+            this.fluxSortant.AutoFlush = true;
+        }
 
 
         // Piocher une carte
@@ -53,6 +69,57 @@ namespace projectRexma
         public void Saboter(int direction)
         {
             Console.WriteLine($"SABOTAGE|{direction}");
+        }
+
+        public string MainJoueur(string[] mess)
+        {
+            return "";
+        }
+        public string Pioche(string mess)
+        {
+            return "";
+        }
+        public string Sommet(string mess)
+        {
+            return "";
+        }
+        public string ReactionMess(string mess)
+        {
+            string[] message = mess.Split("|");
+            if ((message.Length == 2))
+            {
+                return Pioche(message[1]);
+
+            }
+            else if (message.Length == 4)
+            {
+                return Sommet(message[1]);
+            }
+            else
+            {
+                return MainJoueur(message);
+            }
+        }
+        public void Start()
+        {
+            this.Connexion();
+            this.CreationFlux();
+
+            this.fluxSortant.WriteLine("INSCRIRE");
+            ordre = this.fluxEntrant.ReadLine().Split('|')[1];
+
+            String messageRecu = "";
+            Console.WriteLine("-- Début de la partie --");
+            while (nbtours < 100)
+            {
+                messageRecu = this.fluxEntrant.ReadLine();
+                ReactionMess(messageRecu);
+                nbtours += 1;
+            }
+            Console.WriteLine("-- Fin de la partie --");
+
+
+
         }
 
         #endregion
