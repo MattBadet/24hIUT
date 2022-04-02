@@ -7,6 +7,7 @@ namespace projectRexma
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Flo le bg");
         }
     }
 }
