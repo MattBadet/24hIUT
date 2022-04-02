@@ -35,6 +35,12 @@ namespace projectRexma
         }
 
 
+        public Carte(TypeCarte type)
+        {
+            this.typeCarte = type;
+        }
+
+
 
 
 

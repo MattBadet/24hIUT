@@ -4,7 +4,7 @@ using System.Text;
 
 namespace projectRexma
 {
-    enum TypeCarte
+    public enum TypeCarte
     {
         ALIGOTE,
         CHARDONNAY,
