@@ -51,9 +51,14 @@ namespace projectRexma
             this.Connexion();
             this.CreationFlux();
             this.StartPLongue();
-
+            String messageRecu = "";
             Console.WriteLine("-- Début de la partie --");
-            while(this.fluxSortant.ReadLine())
+            while (nbtours < 100)
+            {
+                messageRecu = this.fluxEntrant.ReadLine();
+
+                nbtours += 1;
+            }
             Console.WriteLine("-- Fin de la partie --");
             
 
