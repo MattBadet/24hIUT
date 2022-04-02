@@ -71,11 +71,11 @@ namespace projectRexma
             Console.WriteLine($"SABOTAGE|{direction}");
         }
 
-        public string MainJoueur(string mess)
-        {
-            string[] message = mess.Split("|");
-            return "";
-        }
+        //public string MainJoueur(string mess)
+        //{
+        //    string[] message = mess.Split("|");
+        //    return "";
+        //}
         public void Pioche(string mess)
         {
             string[] message = mess.Split("|");
@@ -97,11 +97,12 @@ namespace projectRexma
             while (nbtours < 100)
             {
                 //Analyse de la main
-                MainJoueur(this.fluxEntrant.ReadLine());
+                this.fluxEntrant.ReadLine();
                 // analyse de la Pioche et il pioche
                 this.fluxSortant.WriteLine("Sommet");
-                Sommet(this.fluxEntrant.ReadLine());
+                string pioche = this.fluxEntrant.ReadLine();
                 // création bouteille ? donc défausser
+
                 
                     
 
