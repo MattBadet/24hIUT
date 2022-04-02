@@ -52,7 +52,7 @@ namespace projectRexma
         public void Piocher(string numeroCarte)
         {
             // Piocher la carte demandée
-            Console.WriteLine($"PIOCHER|{numeroCarte}");
+            this.fluxSortant.WriteLine($"PIOCHER|{numeroCarte}");
             // Réagir à la réponse du serveur
 
             //Ajouter la carte dans la liste
@@ -71,49 +71,41 @@ namespace projectRexma
             Console.WriteLine($"SABOTAGE|{direction}");
         }
 
-        public string MainJoueur(string[] mess)
+        public string MainJoueur(string mess)
         {
+            string[] message = mess.Split("|");
             return "";
         }
-        public string Pioche(string mess)
+        public void Pioche(string mess)
         {
-            return "";
+            string[] message = mess.Split("|");
+            //réfléchir quoi piocher
         }
         public string Sommet(string mess)
         {
-            return "";
-        }
-        public string ReactionMess(string mess)
-        {
             string[] message = mess.Split("|");
-            if ((message.Length == 2))
-            {
-                return Pioche(message[1]);
-
-            }
-            else if (message.Length == 4)
-            {
-                return Sommet(message[1]);
-            }
-            else
-            {
-                return MainJoueur(message);
-            }
+            return "";
         }
         public void Start()
         {
             this.Connexion();
             this.CreationFlux();
-
+            Console.WriteLine("-- Début de la partie --");
             this.fluxSortant.WriteLine("INSCRIRE");
             ordre = this.fluxEntrant.ReadLine().Split('|')[1];
-
-            String messageRecu = "";
-            Console.WriteLine("-- Début de la partie --");
+        
             while (nbtours < 100)
             {
-                messageRecu = this.fluxEntrant.ReadLine();
-                ReactionMess(messageRecu);
+                //Analyse de la main
+                MainJoueur(this.fluxEntrant.ReadLine());
+                // analyse de la Pioche et il pioche
+                this.fluxSortant.WriteLine("Sommet");
+                Sommet(this.fluxEntrant.ReadLine());
+                // création bouteille ? donc défausser
+                
+                    
+
+                
                 nbtours += 1;
             }
             Console.WriteLine("-- Fin de la partie --");
